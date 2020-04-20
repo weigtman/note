@@ -2,3 +2,68 @@
 1、感谢大佬开源 https://jiangyitao.gitee.io/opendx/
 2、小弟只是换了种方式部署很是垃圾，还请大佬勿喷，
 3、部署方式 采用了简单的 Dockerfiel、docker-compose 的知识(希望了解点知识更利于观看)
+4、环境: nas矿机一台 docker、docker-compose 的运行环境
+
+一、dockerfile(具体内容
+
+1) mysql
+  前置条件: mysql:5.7 的官方镜像
+  目录结构:
+    img_mysql
+       -- data.sql
+       -- database.sql
+       ...(其他sql)
+       --setup.sh(相关脚本）
+       --Dockerfile
+
+2) server
+   前置条件: openjdk:8 的官方镜像
+   目录结构:
+    img_server
+       -- opendx-server
+          -- static
+          ...(其他jar包)
+          --setup.sh(相关脚本）
+       --Dockerfile
+   
+3) agent
+  前置条件: appium/appium:1.17.0-p0 的官方镜像
+   目录结构:
+    img_agent
+       -- opendx-agent
+          -- lib
+          -- vendor
+          ...(其他jar包)
+          --setup.sh(相关脚本）
+       --Dockerfile
+tip:相关服务启动(参数配置) 请参考各个setup.sh 根据自己的需求配置
+      
+二、docker-compose
+
+1) 综上的compose文件
+
+2) 相关命令
+  创建
+  docker-compose up -d --build 
+  查看日志
+  docker logs opendx-mysql-weigtman
+  docker logs opendx-agent-weigtman
+  docker logs opendx-server-weigtman
+  查看设备连接
+  docker exec -it opendx-agent-weigtman adb devices
+  进入容器
+  docker exec -it opendx-agent-weigtman /bin/bash
+  
+三、访问
+  小弟我的局域网ip以及端口: 192.168.0.100:8887
+  所以我就 http://192.168.0.100:8887/ 欸 就可以了 
+ 
+  
+  
+  
+说在最后: 开源万岁~~~
+永远是这样
+风后面是风
+天空上面是天空
+道路前面还是道路
+ 一jiao我里giaogiao
