@@ -1,0 +1,4 @@
+写在前面
+1、感谢大佬开源 https://jiangyitao.gitee.io/opendx/
+2、小弟只是换了种方式部署很是垃圾，还请大佬勿喷，
+3、部署方式 采用了简单的 Dockerfiel、docker-compose 的知识(希望了解点知识更利于观看)
