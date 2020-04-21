@@ -7,6 +7,7 @@
 一、dockerfile(具体内容
 
 1) mysql
+  https://github.com/weigtman/note/tree/master/opendx_docker/img_mysql
   前置条件: mysql:5.7 的官方镜像
   目录结构:
     img_mysql
@@ -17,6 +18,7 @@
        --Dockerfile
 
 2) server
+   https://github.com/weigtman/note/tree/master/opendx_docker/img_server
    前置条件: openjdk:8 的官方镜像
    目录结构:
     img_server
@@ -27,6 +29,7 @@
        --Dockerfile
    
 3) agent
+  https://github.com/weigtman/note/tree/master/opendx_docker/img_agent
   前置条件: appium/appium:1.17.0-p0 的官方镜像
    目录结构:
     img_agent
@@ -41,6 +44,7 @@ tip:相关服务启动(参数配置) 请参考各个setup.sh 根据自己的需�
 二、docker-compose
 
 1) 综上的compose文件
+  https://github.com/weigtman/note/blob/master/opendx_docker/docker-compose.yaml
 
 2) 相关命令
   创建
@@ -66,4 +70,3 @@ tip:相关服务启动(参数配置) 请参考各个setup.sh 根据自己的需�
 风后面是风
 天空上面是天空
 道路前面还是道路
- 一jiao我里giaogiao
