@@ -1,0 +1,37 @@
+2020-04-20T12:58:20.271986Z mysqld_safe Logging to '/var/lib/mysql/8ccfe86afd79.err'.
+2020-04-20T12:58:20.319924Z mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+2020-04-20T12:58:20.618665Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2020-04-20T12:58:20.621583Z 0 [Note] /usr/sbin/mysqld (mysqld 5.7.26) starting as process 334 ...
+2020-04-20T12:58:20.633996Z 0 [Note] InnoDB: PUNCH HOLE support available
+2020-04-20T12:58:20.634078Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2020-04-20T12:58:20.634099Z 0 [Note] InnoDB: Uses event mutexes
+2020-04-20T12:58:20.634119Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2020-04-20T12:58:20.634139Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-04-20T12:58:20.634159Z 0 [Note] InnoDB: Using Linux native AIO
+2020-04-20T12:58:20.634788Z 0 [Note] InnoDB: Number of pools: 1
+2020-04-20T12:58:20.635066Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2020-04-20T12:58:20.638710Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2020-04-20T12:58:20.668678Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-04-20T12:58:20.675510Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2020-04-20T12:58:20.689562Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2020-04-20T12:58:20.729039Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-04-20T12:58:20.729217Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-04-20T12:58:20.905632Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2020-04-20T12:58:20.907862Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2020-04-20T12:58:20.907923Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2020-04-20T12:58:20.908610Z 0 [Note] InnoDB: Waiting for purge to start
+2020-04-20T12:58:20.959401Z 0 [Note] InnoDB: 5.7.26 started; log sequence number 2525875
+2020-04-20T12:58:20.960007Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2020-04-20T12:58:20.971882Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2020-04-20T12:58:20.975409Z 0 [Warning] CA certificate ca.pem is self signed.
+2020-04-20T12:58:20.983070Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2020-04-20T12:58:20.983193Z 0 [Note] IPv6 is available.
+2020-04-20T12:58:20.983221Z 0 [Note]   - '::' resolves to '::';
+2020-04-20T12:58:20.983276Z 0 [Note] Server socket created on IP: '::'.
+2020-04-20T12:58:20.984195Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2020-04-20T12:58:20.992888Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2020-04-20T12:58:21.001545Z 0 [Note] InnoDB: Buffer pool(s) load completed at 200420 12:58:21
+2020-04-20T12:58:21.057835Z 0 [Note] Event Scheduler: Loaded 0 events
+2020-04-20T12:58:21.058387Z 0 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.7.26'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2020-04-20T12:58:52.622051Z 7 [Warning] IP address '192.168.224.1' could not be resolved: Name or service not known

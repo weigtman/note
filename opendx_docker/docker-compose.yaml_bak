@@ -1,0 +1,48 @@
+version: '2'
+
+services:
+   mysql:
+   #找到当前目录下mysql构建镜像
+    build: ./img_server
+    #镜像名称
+    image: mysql-opendx-compose:v0.1
+    #项目名称
+    container_name: opendx-mysql
+    restart: unless-stopped
+    privileged: true
+    #端口映射
+    ports:
+     - "2206:3306"
+     #将mysql目录映射到本地 应根据自己所需要映射的目录进行修改
+    volumes:
+     - "./volume/mysql_data/conf:/etc/mysql/conf.d"
+     - "./volume/mysql_data/logs:/logs"
+     - "./volume/mysql_data/data:/var/lib/mysql"
+   
+   server:
+    build: ./img_server
+    image: opendx-server-compose:v0.1
+    container_name: opendx-server
+    restart: unless-stopped
+    privileged: true
+    #network_mode: "host"
+     ports:
+     - "8887:8887"
+    volumes:
+     - "./volume/mysql_data/conf:/etc/mysql/conf.d"
+ 
+ 
+   agent:
+   #找到当前目录下的java文件夹构建酱香
+    build: ./img_agent
+    #镜像名称
+    image: opendx-agent-compose:v0.1
+    container_name: opendx-agent
+    restart: unless-stopped
+    privileged: true
+    network_mode: "host"
+    volumes:
+     - "/dev/bus/usb:/dev/bus/usb"
+     - "~/.android:/root/.android"
+    
+    

@@ -1,0 +1,30 @@
+{ version: '2',
+  services: 
+   { mysql: 
+      { build: './img_mysql',
+        image: 'mysql-opendx-compose:v0.1',
+        container_name: 'opendx-mysql-weigtman',
+        restart: 'unless-stopped',
+        privileged: true,
+        ports: [ '2206:3306' ],
+        volumes: 
+         [ './volume/mysql_data/conf:/etc/mysql/conf.d',
+           './volume/mysql_data/logs:/logs',
+           './volume/mysql_data/data:/var/lib/mysql' ] },
+     server: 
+      { build: './img_server',
+        image: 'opendx-server-compose:v0.1',
+        container_name: 'opendx-server-weigtman',
+        restart: 'unless-stopped',
+        privileged: true,
+        ports: [ '8887:8887' ],
+        #volumes: [ './volume/mysql_data/conf:/etc/mysql/conf.d' ]
+        depends_on: [mysql, agent] } ,
+     agent: 
+      { build: './img_agent',
+        image: 'opendx-agent-compose:v0.1',
+        container_name: 'opendx-agent-weigtman',
+        restart: 'unless-stopped',
+        privileged: true,
+        network_mode: 'host',
+        volumes: [ '/dev/bus/usb:/dev/bus/usb', '~/.android:/root/.android' ] } } }
